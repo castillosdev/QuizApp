@@ -1,6 +1,6 @@
 # QuizApp
 
-This template should help get you started developing with Vue 3 in Vite.
+This Quiz App built in Vue3 demonstrates the use of routing, components, and props.
 
 ## Recommended IDE Setup
 
