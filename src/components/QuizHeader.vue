@@ -23,7 +23,7 @@
     }
 
     .bar{
-        width: 300px;
+        width: 50%;
         height: 50px;
         border-radius: 5px;
         border: 3px solid #adfcb7;

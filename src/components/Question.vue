@@ -28,7 +28,7 @@
 
     .option {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 20px;
     cursor: pointer;
     }
@@ -47,7 +47,7 @@
     }
 
     .option-value {
-    width: 200px;
+    width: 100%;
     height: 60px;
     color: rgb(107, 107, 107);
     background-color: #f2f2f2;
