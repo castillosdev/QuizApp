@@ -1,7 +1,7 @@
 <script setup>
     import Question from '../components/Question.vue';
     import QuizHeader from '../components/QuizHeader.vue';
-    import { ref } from 'vue';
+    import { ref,watch } from 'vue';
     import { useRoute } from 'vue-router';
     import quizzes from '../data/quizzes.json';
 
@@ -9,7 +9,10 @@
     const quizId = parseInt(route.params.id);
     const quiz = quizzes.find(quiz => quiz.id === quizId);
     const currentQuestion = ref(0);
-    const questionStatus = `Question ${currentQuestion.value + 1}/${quiz.questions.length}`;
+    const questionStatus = ref(`Question ${currentQuestion.value + 1}/${quiz.questions.length}`);
+    watch(() =>currentQuestion.value, () => {
+        questionStatus.value = `Question ${currentQuestion.value + 1}/${quiz.questions.length}`;
+    });
 </script>
 
 <template>
@@ -17,6 +20,7 @@
         <QuizHeader :questionStatus ="questionStatus" />
         <Question :question="quiz.questions[currentQuestion]"/>
     </div>
+    <button @click="currentQuestion++">Next</button>
 </template>
 
 <style scoped>
