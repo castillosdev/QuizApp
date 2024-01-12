@@ -10,11 +10,16 @@
     const quiz = quizzes.find(quiz => quiz.id === quizId);
     const currentQuestion = ref(0);
     const questionStatus = computed(() => `Question ${currentQuestion.value + 1}/${quiz.questions.length}`);
+    const barPercentage = computed(() => `${(currentQuestion.value + 1) / quiz.questions.length * 100}%`);
+
 </script>
 
 <template>
     <div class="question-container">
-        <QuizHeader :questionStatus ="questionStatus" />
+        <QuizHeader 
+            :questionStatus ="questionStatus"
+            :barPercentage="barPercentage"
+        />
         <Question :question="quiz.questions[currentQuestion]"/>
     </div>
     <button @click="currentQuestion++">Next</button>
