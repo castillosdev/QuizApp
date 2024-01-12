@@ -1,6 +1,6 @@
 
 <template>
-    <div>
+    <div class="question-container">
         <header>
             <h4>Question 1/3</h4>
             <div class="bar">
@@ -16,6 +16,24 @@
         <div class="options-container">
             <div class="option">
                 <p class="option-label">A</p>
+                <div class="option-value">
+                    <p>Ag</p>
+                </div>
+            </div>
+            <div class="option">
+                <p class="option-label">B</p>
+                <div class="option-value">
+                    <p>Ag</p>
+                </div>
+            </div>
+            <div class="option">
+                <p class="option-label">C</p>
+                <div class="option-value">
+                    <p>Ag</p>
+                </div>
+            </div>
+            <div class="option">
+                <p class="option-label">D</p>
                 <div class="option-value">
                     <p>Ag</p>
                 </div>
@@ -50,6 +68,7 @@
 
     .question-container{
         margin-top: 30px;
+        margin: 0 20px;
     }
 
     .question{
