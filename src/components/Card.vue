@@ -1,9 +1,11 @@
 <script setup>
     import { defineProps } from 'vue'
+    import { RouterLink } from 'vue-router';
     const {quizData} = defineProps(['quizData'])
     console.log(quizData)
 </script>
 <template>
+    <RouterLink :to="{name: 'Quiz', params: {id: quizData.id}}">
       <div class="card">
         <img :src="quizData.img" alt="">
         <div class="card-text">
@@ -11,6 +13,7 @@
           <p>{{ quizData.questions.length }} questions</p>
         </div>
       </div>
+    </RouterLink>
 </template>
 <style scoped>
     .card {
