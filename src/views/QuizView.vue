@@ -1,7 +1,7 @@
 <script setup>
     import Question from '../components/Question.vue';
     import QuizHeader from '../components/QuizHeader.vue';
-    import { ref,watch,computed } from 'vue';
+    import { ref,computed } from 'vue';
     import { useRoute } from 'vue-router';
     import quizzes from '../data/quizzes.json';
 
